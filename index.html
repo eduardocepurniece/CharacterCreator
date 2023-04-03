@@ -5,14 +5,66 @@
     	<meta name="description" content="This is where your description goes">
     	<meta name="keywords" content="one, two, three">
 
-		<title>Title in the tab</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap" rel="stylesheet">
+
+		<title>Characters</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+		<h1>Random name</h1>
+		<section class="charList">
+			<h2>Characters</h2>
+			<div>
+				<ul>
+
+				</ul>
+			</div>
+			<button id="createNewCharButton">Create New Character</button>
+		</section>
 		
+		<section class="createChar hidden">
+			<div>
+				<h3>Race</h3>
+				<ul>
+					<li>Human</li>
+					<li>Noble</li>
+					<li>Elf</li>
+					<li>Ogre</li>
+				</ul>
+			</div>
+			<div>
+				<h3>Class</h3>
+				<ul>
+					<li>Warrior</li>
+					<li>Rogue</li>
+					<li>Mage</li>
+					<li>Hunter</li>
+				</ul>
+			</div>
+			<div>
+				<h3>Stats</h3>
+			</div>
+			<div>
+				<img src="#" alt="Player picture">
+			</div>
+			<div>
+				<form>
+					<label>Name: <input type="text"></label><br>
+				</form>
+				<button id="submitCharButton">Create</button>				
+			</div>
+			<div>
+				<h4>Race briefing</h4>
+			</div>
+			<div>
+				<h4>Class briefing</h4>
+			</div>
+		</section>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
