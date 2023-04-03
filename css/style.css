@@ -5,12 +5,27 @@
 /* Box Model Hack */
 *{
   box-sizing: border-box;
+  font-family: 'Silkscreen', monospace;
+  font-weight: 100;
+}
+
+.hidden{
+  display: none;
 }
 
 /******************************************
 /* LAYOUT
 /*******************************************/
-
+body{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.charactersList{
+  border: 1px solid black;
+  width: 50%;
+  height: 70vh;
+}
 
 
 /******************************************
