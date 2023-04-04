@@ -16,10 +16,10 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<h1>Random name</h1>
+		<h1>Aronnia's fate</h1>
 		<section class="charList">
 			<h2>Characters</h2>
-			<div>
+			<div class="chars">
 				<ul>
 
 				</ul>
@@ -28,29 +28,37 @@
 		</section>
 		
 		<section class="createChar hidden">
-			<div>
+			<div class="dataBox">
 				<h3>Race</h3>
-				<ul>
-					<li>Human</li>
-					<li>Noble</li>
-					<li>Elf</li>
-					<li>Ogre</li>
-				</ul>
+				<input type="radio" id="human" name="race" value="human" checked>
+  				<label for="human">human</label><br>
+				<input type="radio" id="noble" name="race" value="noble">
+  				<label for="noble">noble</label><br>
+				<input type="radio" id="elf" name="race" value="elf">
+  				<label for="elf">elf</label><br>
+				<input type="radio" id="orc" name="race" value="orc">
+  				<label for="orc">orc</label><br>
 			</div>
-			<div>
+			<div class="dataBox">
 				<h3>Class</h3>
-				<ul>
-					<li>Warrior</li>
-					<li>Rogue</li>
-					<li>Mage</li>
-					<li>Hunter</li>
-				</ul>
+				<input type="radio" id="warrior" name="classJob" value="warrior" checked>
+  				<label for="warrior">warrior</label><br>
+				<input type="radio" id="rogue" name="classJob" value="rogue">
+  				<label for="rogue">rogue</label><br>
+				<input type="radio" id="mage" name="classJob" value="mage">
+  				<label for="mage">mage</label><br>
+				<input type="radio" id="hunter" name="classJob" value="hunter">
+  				<label for="hunter">hunter</label><br>
 			</div>
-			<div>
-				<h3>Stats</h3>
+			<div class="dataBox">
+				<h3>Gender</h3>
+				<input type="radio" id="male" name="gender" value="male" checked>
+  				<label for="male">male</label><br>
+				<input type="radio" id="female" name="gender" value="female">
+  				<label for="female">female</label><br>
 			</div>
-			<div>
-				<img src="#" alt="Player picture">
+			<div class="charCanva">
+				<canvas id="canvas">Character canvas</canvas>
 			</div>
 			<div>
 				<form>
@@ -58,11 +66,14 @@
 				</form>
 				<button id="submitCharButton">Create</button>				
 			</div>
-			<div>
+			<div class="dataBox">
 				<h4>Race briefing</h4>
 			</div>
-			<div>
+			<div class="dataBox">
 				<h4>Class briefing</h4>
+			</div>
+			<div class="dataBox">
+				<h3>Stats</h3>
 			</div>
 		</section>
 
