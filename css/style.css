@@ -74,7 +74,7 @@ h1, h2{
 li{
   list-style: none;
 }
-canvas{
+.charCreatorCanvas{
   height: 64px;
   width: 94px;
   transform: scale(6);
@@ -82,6 +82,13 @@ canvas{
   margin-left: 30%;
 }
 
+.cropped-image {
+  max-width: 49px;
+  max-height: 64px;
+  object-fit: contain;
+  object-position: 25% 25%; 
+  overflow: hidden;
+}
 
 
 .hidden{
