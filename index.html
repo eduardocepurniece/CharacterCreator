@@ -20,7 +20,7 @@
 		<section class="charList">
 			<h2>Characters</h2>
 			<div class="chars">
-				<ul>
+				<ul id="charactersUl">
 
 				</ul>
 			</div>
@@ -58,22 +58,30 @@
   				<label for="female">female</label><br>
 			</div>
 			<div class="charCanva">
-				<canvas id="canvas">Character canvas</canvas>
+				<canvas id="canvas" class="charCreatorCanvas">Character canvas</canvas>
 			</div>
 			<div>
 				<form>
-					<label>Name: <input type="text"></label><br>
+					<label>Name: <input type="text" id="name"></label><br>
 				</form>
 				<button id="submitCharButton">Create</button>				
 			</div>
 			<div class="dataBox">
 				<h4>Race briefing</h4>
+				<p id="raceBriefing"></p>
 			</div>
 			<div class="dataBox">
 				<h4>Class briefing</h4>
+				<p id="classBriefing"></p>
 			</div>
 			<div class="dataBox">
 				<h3>Stats</h3>
+				<ul>
+					<li id="str">str: </li>
+					<li id="agi">agi: </li>
+					<li id="wis">wis: </li>
+					<li id="lck">lck: </li>
+				</ul>
 			</div>
 		</section>
 
