@@ -1,4 +1,3 @@
 # CharacterCreator
-work on css
+work on responsiveness
 add music and sound fx
-add hover interaction
