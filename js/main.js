@@ -1,8 +1,30 @@
 document.querySelector('#createNewCharButton').addEventListener('click', openCharCreator);
 document.querySelector('#submitCharButton').addEventListener('click', closeCharCreator);
+document.querySelector('#playStopSong').addEventListener('click', playStopSong);
+
+let songToggle = false;
+let cSound = document.querySelector('#clickSound');
+
+function playStopSong(){
+    if(!songToggle){
+        document.querySelector('#backgroundSong').play();
+        document.querySelector('#playStopSong').innerHTML = 'Music off';
+        songToggle = true;
+    }else{
+        document.querySelector('#backgroundSong').pause();
+        document.querySelector('#playStopSong').innerHTML = 'Music on';
+        songToggle = false;
+    }
+}
+
 
 /*Character properties array*/ 
 let inputs = document.querySelectorAll('input');
+Array.from(inputs).forEach(element => element.addEventListener('click', playClickSound))
+
+function playClickSound(click){
+    cSound.play();
+}
 
 /*variables for frame counting for sprite movement */
 let currFrame = 0;
@@ -13,7 +35,7 @@ let characters = [];
 let runCheck = false;
 /*function to change screen from list to creator and initiate the drawing of the char loop */
 function openCharCreator(){
-    
+    cSound.play();
     document.querySelector('.charList').classList.add('hidden');
     document.querySelector('.createChar').classList.remove('hidden');
     /*check if drawChar loop has initiated */
@@ -25,6 +47,7 @@ function openCharCreator(){
 
 /*Changes screen from creator to list */
 function closeCharCreator(){
+    cSound.play();
     let info = checkForChecked();
     let charName = document.querySelector('#name').value;
     let nameValidator = true;

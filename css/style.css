@@ -67,7 +67,7 @@ button{
   position: relative;
   z-index: 2;
   overflow-wrap: normal;
-  font-size: 0.6rem;
+  font-size: 0.9rem;
   padding: 5px;
   text-align: center;
 }
@@ -133,6 +133,13 @@ input[type=text] {
 ul {
   padding: 0;
   list-style-type: none;
+}
+#playStopSong{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  margin: 0px;
 }
 .hidden{
   display: none;
