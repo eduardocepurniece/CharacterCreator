@@ -55,7 +55,9 @@ button{
   justify-content: space-between;
 }
 .dataBox{
-  height: 33.33%
+  height: 33.33%;
+  position: relative;
+  z-index: 2;
 }
 .charCanva{
   height: 80%;
@@ -86,7 +88,8 @@ li{
   max-width: 49px;
   max-height: 64px;
   object-fit: contain;
-  object-position: 25% 25%; 
+  object-position: top left; 
+  display: block;
   overflow: hidden;
 }
 
