@@ -28,7 +28,7 @@ function closeCharCreator(){
     let info = checkForChecked();
     let charName = document.querySelector('#name').value;
     let nameValidator = true;
-    
+
     if(charName.length){
         for(let i = 0; i < characters.length; i++){
             console.log('insidee');
@@ -166,8 +166,8 @@ function putCharsInDom(char){
     const cname = document.createElement("p");
     const raceClass = document.createElement("p");
     const cImage = document.createElement('img');
-    //cImage.classList.add('cropped-image');
     newDiv.classList.add('cropped-image');
+    newLi.classList.add('char');
 
     cImage.src = char.image;
     const cnameNode = document.createTextNode(char.name);

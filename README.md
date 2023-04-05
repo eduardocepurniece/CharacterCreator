@@ -1,5 +1,4 @@
 # CharacterCreator
-to do:
-crop character images.
-fix frames acceleration when creating new characters.
-work on css.
+work on css
+add music and sound fx
+add hover interaction

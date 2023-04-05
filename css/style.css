@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: 'Silkscreen', monospace;
   font-weight: 100;
+  color: rgba(223, 235, 79, 1);
 }
 
 
@@ -25,13 +26,16 @@ body{
 }
 .charactersList{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 .chars{
   min-height: 60vh;
   width: 50vw;
   background-color: rgba(0, 60, 0, 0.5);
+  
+}
+.charactersUl{
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -42,8 +46,11 @@ button{
   width: 50%;
 }
 .char{
+  display: inline-block;
   height: 50%;
   width: 33%;
+  margin: 0px;
+  text-align: center;
 }
 
 .createChar{
@@ -52,12 +59,17 @@ button{
   background-color: rgba(0, 60, 0, 0.5);
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .dataBox{
   height: 33.33%;
+  width: 20vh;
   position: relative;
   z-index: 2;
+  overflow-wrap: normal;
+  font-size: 0.8rem;
+  padding: 5px;
+  text-align: center;
 }
 .charCanva{
   height: 80%;
@@ -76,6 +88,9 @@ h1, h2{
 li{
   list-style: none;
 }
+p{
+  margin: 5px;
+}
 .charCreatorCanvas{
   height: 64px;
   width: 94px;
@@ -91,8 +106,14 @@ li{
   object-position: top left; 
   display: block;
   overflow: hidden;
+  margin: auto;
 }
-
+button, form label input{
+  color: black;
+}
+/*input[type=radio] {
+    display: none;
+}*/
 
 .hidden{
   display: none;
