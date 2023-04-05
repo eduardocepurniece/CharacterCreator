@@ -10,33 +10,50 @@ let currPosition = 0;
 
 let characters = [];
 
+let runCheck = false;
 /*function to change screen from list to creator and initiate the drawing of the char loop */
 function openCharCreator(){
-    let runCheck = false;
+    
     document.querySelector('.charList').classList.add('hidden');
     document.querySelector('.createChar').classList.remove('hidden');
     /*check if drawChar loop has initiated */
     if(!runCheck){
         drawChar();
+        console.log(runCheck);
     }    
-    //removeLi();
 }
 
 /*Changes screen from creator to list */
 function closeCharCreator(){
-    document.querySelector('.charList').classList.remove('hidden');
-    document.querySelector('.createChar').classList.add('hidden');
-
     let info = checkForChecked();
     let charName = document.querySelector('#name').value;
-    let newChar = new CharCreator(charName, info[0], info[1], info[2],statsSelector(info[1]));
-    characters.push(newChar);
-    putCharsInDom(newChar);
+    let nameValidator = true;
+    
+    if(charName.length){
+        for(let i = 0; i < characters.length; i++){
+            console.log('insidee');
+            if (Object.values(characters[i]).indexOf(charName) > -1) {
+                nameValidator = false;
+                alert('Name already taken.')
+            }
+        }       
+    }else{
+        nameValidator = false;
+        alert('Please have the decency to give the character a name!');
+    }
+    if(nameValidator){
+        let newChar = new CharCreator(charName, info[0], info[1], info[2],statsSelector(info[1]));
+        characters.push(newChar);
+        putCharsInDom(newChar);
+
+        document.querySelector('.charList').classList.remove('hidden');
+        document.querySelector('.createChar').classList.add('hidden');
+    }    
 }
 
 /*draw character on canvas and game loop*/
 function drawChar(){
-    runcheck = true;
+    runCheck = true;
 
     /*game loop */
     const step = () => {
@@ -145,19 +162,23 @@ function CharCreator(name, race, classJob, gender, stats){
 
 function putCharsInDom(char){
     const newLi = document.createElement("li");
+    const newDiv = document.createElement('div');
     const cname = document.createElement("p");
     const raceClass = document.createElement("p");
     const cImage = document.createElement('img');
-    cImage.classList.add('.cropped-image');
+    //cImage.classList.add('cropped-image');
+    newDiv.classList.add('cropped-image');
 
     cImage.src = char.image;
     const cnameNode = document.createTextNode(char.name);
     const raceClassNode = document.createTextNode(`${char.race} ${char.classJob}`);
-
+    
+    newDiv.appendChild(cImage);
     cname.appendChild(cnameNode);
     raceClass.appendChild(raceClassNode);
-    newLi.appendChild(cname);
-    newLi.appendChild(cImage);
+
+    newLi.appendChild(newDiv);
+    newLi.appendChild(cname);    
     newLi.appendChild(raceClass);
     document.querySelector('#charactersUl').appendChild(newLi);
 }
