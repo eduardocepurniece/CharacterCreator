@@ -55,7 +55,7 @@ button{
 
 .createChar{
   height: 70vh;
-  width: 60vw;
+  min-width: 60vw;
   background-color: rgba(0, 60, 0, 0.5);
   display: flex;
   flex-flow: column wrap;
@@ -67,7 +67,7 @@ button{
   position: relative;
   z-index: 2;
   overflow-wrap: normal;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   padding: 5px;
   text-align: center;
 }
@@ -84,6 +84,9 @@ button{
 h1, h2{
   color: lightgoldenrodyellow;
   text-align: center;
+}
+h3, h4{
+  text-decoration: underline;
 }
 li{
   list-style: none;
@@ -111,10 +114,26 @@ p{
 button, form label input{
   color: black;
 }
-/*input[type=radio] {
+input[type=radio] {
     display: none;
-}*/
-
+}
+input[type=radio]:checked + label {
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+}
+.dataBox label, .dataBox h3, .dataBox h4{
+  font-size: 1rem;
+}
+input[type=text] {
+  background-color: rgba(0, 60, 0, 0.5);
+  color: rgba(223, 235, 79, 1);
+}
+.char:hover{
+  box-shadow: rgba(255, 255, 255, 1) 0px 0px 0px 3px;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
 .hidden{
   display: none;
 }

@@ -89,7 +89,7 @@ function drawChar(){
 
 /*Frame counting for animation/sprite movement*/
 function updateFrame(){
-    if(currFrame > 16){
+    if(currFrame > 6){
         currFrame = 0;
         if(currPosition > 2){
             currPosition = 0;
